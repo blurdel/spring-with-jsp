@@ -29,8 +29,8 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("update");
 		
 		PersonList theList = new PersonList();
-		theList.getPersonList().add(new Person("Zoey", "treats", 14));
-		theList.getPersonList().add(new Person("Bear", "park", 15));
+		theList.getPersonList().add(new Person("Zoey", "", 15));
+		theList.getPersonList().add(new Person("", "", 0));
 		mav.addObject("pList", theList);
 		
 		return mav;
@@ -58,8 +58,9 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("grid");
 		
 		PersonList theList = new PersonList();
-		theList.getPersonList().add(new Person("Zoey", "treats", 1));
-		theList.getPersonList().add(new Person("Bear", "park", 2));
+		theList.getPersonList().add(new Person("Zoey", "Bear", 15));
+		theList.getPersonList().add(new Person("Tana", "T", 9));
+		theList.getPersonList().add(new Person("Camy", "R", 10));
 		mav.addObject("pList", theList);
 		
 		return mav;
